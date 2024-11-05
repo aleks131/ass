@@ -1,0 +1,218 @@
+/* Data Dashboard Project Specific Styles */
+:root {
+    --dashboard-primary: #9C27B0;
+    --dashboard-secondary: #7B1FA2;
+    --dashboard-accent: rgba(156, 39, 176, 0.1);
+}
+
+.dashboard-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../assets/images/data.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.dashboard-hero .hero-content h1 {
+    background: linear-gradient(45deg, var(--dashboard-primary), var(--dashboard-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Dashboard Metrics */
+.dashboard-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    background: rgba(156, 39, 176, 0.05);
+    box-shadow: 0 10px 20px rgba(156, 39, 176, 0.1);
+}
+
+.metric-card i {
+    font-size: 2.5rem;
+    color: var(--dashboard-primary);
+    margin-bottom: 1rem;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--dashboard-primary);
+    margin: 1rem 0;
+    text-shadow: 0 0 10px rgba(156, 39, 176, 0.3);
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background: rgba(156, 39, 176, 0.05);
+    box-shadow: 0 10px 20px rgba(156, 39, 176, 0.1);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--dashboard-primary);
+    margin-bottom: 1rem;
+}
+
+/* Visualization Section */
+.visualization-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.chart-container {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(156, 39, 176, 0.2);
+    height: 300px;
+    transition: all 0.3s ease;
+}
+
+.chart-container:hover {
+    transform: translateY(-5px);
+    background: rgba(156, 39, 176, 0.05);
+    box-shadow: 0 10px 20px rgba(156, 39, 176, 0.1);
+}
+
+.chart-container h3 {
+    color: var(--dashboard-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* Tech Stack */
+.tech-icon {
+    border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+.tech-icon i {
+    color: var(--dashboard-primary);
+}
+
+.tech-category {
+    border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+.tech-category h3 {
+    color: var(--dashboard-primary);
+}
+
+.tech-category li i {
+    color: var(--dashboard-primary);
+}
+
+/* Results Section */
+.result-card {
+    border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+.result-number {
+    color: var(--dashboard-primary);
+}
+
+/* Animation Effects */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(156, 39, 176, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(156, 39, 176, 0.2);
+    }
+}
+
+.metric-card:hover,
+.feature-card:hover,
+.tech-icon:hover,
+.chart-container:hover {
+    animation: glowPulse 2s infinite;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .dashboard-metrics {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .visualization-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .chart-container {
+        height: 250px;
+        padding: 1.5rem;
+    }
+
+    .chart-container h3 {
+        font-size: 1.1rem;
+    }
+
+    .metric-card {
+        padding: 1.5rem;
+    }
+
+    .metric-value {
+        font-size: 2rem;
+    }
+}
+
+/* Chart Loading States */
+.chart-loading {
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-loading::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(156, 39, 176, 0.1);
+    border-top-color: var(--dashboard-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+} 

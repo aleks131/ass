@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustainovationHub - Project Details</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-page.css">
+    <link rel="stylesheet" href="../css/sustainovationhub.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="../css/project-mobile.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="../js/components-loader.js"></script>
+    <script src="../js/project-pages/sustainovationhub.js" defer></script>
+</head>
+<body>
+    <div class="scroll-progress"></div>
+
+    <!-- Single Navigation -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="../index.html#intro">Home</a></li>
+            <li><a href="../index.html#about">About Me</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="cv-actions">
+            <a href="../documentsandzip/Aleks_Aleksandrov_CV.pdf" 
+               class="cv-button view-cv"
+               target="_blank">
+                <i class="fas fa-eye"></i> View CV
+            </a>
+            <a href="../documentsandzip/Aleksreclet.pdf" 
+               class="cv-button view-recommendation"
+               target="_blank">
+                <i class="fas fa-certificate"></i> View Recommendation
+            </a>
+        </div>
+    </nav>
+
+    <!-- Single Unified Header/Hero Section -->
+    <header class="project-hero sustainovation-hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <h1>SustainovationHub</h1>
+            <p class="hero-subtitle">An e-commerce platform connecting eco-conscious consumers with sustainable products</p>
+            <div class="project-meta">
+                <span><i class="fas fa-users"></i> Team Size: 4</span>
+                <span><i class="fas fa-calendar"></i> Duration: 10 Weeks</span>
+                <span><i class="fas fa-code-branch"></i> Role: Lead Developer</span>
+            </div>
+            <div class="tech-stack">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>MySQL</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <div class="project-container">
+        <!-- Overview Section -->
+        <section class="project-section overview-section" data-aos="fade-up">
+            <h2>Project Overview</h2>
+            <div class="overview-content">
+                <div class="project-description">
+                    <p>SustainovationHub is a comprehensive e-commerce platform that connects eco-conscious consumers with sustainable product manufacturers. The platform was developed to address the growing demand for sustainable products while ensuring transparency and authenticity in the sustainable products marketplace.</p>
+                    <div class="key-features">
+                        <h3>Key Objectives</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Creating a trusted marketplace for sustainable products</li>
+                            <li><i class="fas fa-check-circle"></i> Implementing rigorous seller verification processes</li>
+                            <li><i class="fas fa-check-circle"></i> Developing real-time impact tracking systems</li>
+                            <li><i class="fas fa-check-circle"></i> Building an engaged community of environmentally conscious users</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="platform-metrics">
+                    <div class="metric-card">
+                        <i class="fas fa-store"></i>
+                        <h3>Active Sellers</h3>
+                        <div id="sellers-metric" class="metric-value">500+</div>
+                        <p>Verified Sustainable Sellers</p>
+                    </div>
+                    <div class="metric-card">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h3>Products Listed</h3>
+                        <div id="products-metric" class="metric-value">5000+</div>
+                        <p>Sustainable Products</p>
+                    </div>
+                    <div class="metric-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Environmental Impact</h3>
+                        <div id="impact-metric" class="metric-value">30%</div>
+                        <p>Carbon Footprint Reduction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="project-section features-section" data-aos="fade-up">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Seller Verification</h3>
+                    <p>Rigorous verification process ensuring authenticity and quality of sustainable sellers</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Impact Tracking</h3>
+                    <p>Real-time monitoring and visualization of environmental impact metrics</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Features</h3>
+                    <p>Interactive forums and knowledge sharing platform for sustainable practices</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Trust System</h3>
+                    <p>Transparent rating and review system for products and sellers</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="project-section tech-section" data-aos="fade-up">
+            <h2>Technical Implementation</h2>
+            <div class="tech-stack-icons">
+                <div class="tech-icon">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-database"></i>
+                    <span>MySQL</span>
+                </div>
+            </div>
+
+            <div class="tech-stack-details">
+                <div class="tech-category">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Semantic HTML5 structure</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced CSS3 animations</li>
+                        <li><i class="fas fa-check-circle"></i> Responsive design implementation</li>
+                        <li><i class="fas fa-check-circle"></i> Vanilla JavaScript for interactivity</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h3><i class="fas fa-server"></i> Backend Development</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> PHP backend logic</li>
+                        <li><i class="fas fa-check-circle"></i> MySQL database integration</li>
+                        <li><i class="fas fa-check-circle"></i> RESTful API architecture</li>
+                        <li><i class="fas fa-check-circle"></i> Session-based authentication</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h3><i class="fas fa-shield-alt"></i> Security</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> XSS prevention</li>
+                        <li><i class="fas fa-check-circle"></i> SQL injection protection</li>
+                        <li><i class="fas fa-check-circle"></i> CSRF protection</li>
+                        <li><i class="fas fa-check-circle"></i> Secure data handling</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="project-section results-section" data-aos="fade-up">
+            <h2>Results & Impact</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">500+</div>
+                    <p>Verified Sellers</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">5000+</div>
+                    <p>Sustainable Products</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">30%</div>
+                    <p>Carbon Footprint Reduction</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Project Navigation -->
+    <nav class="project-nav">
+        <a href="../index.html#projects" class="nav-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        <a href="solar-panel.html" class="nav-link">Next Project <i class="fas fa-arrow-right"></i></a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="main-footer glass-effect">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Aleks Aleksandrov</h3>
+                <p>Business Engineer & Data Analyst</p>
+                <div class="footer-social">
+                    <a href="https://github.com/yourusername" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:aleksaleksandrov670@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html#intro">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> aleksaleksandrov670@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +45 52 71 37 04 </p>
+                <p><i class="fas fa-map-marker-alt"></i> Aarhus, Denmark</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Aleks Aleksandrov. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

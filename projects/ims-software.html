@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Market Selection Software - Project Details</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-page.css">
+    <link rel="stylesheet" href="../css/ims-software.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="../css/project-mobile.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="../js/components-loader.js"></script>
+    <script src="../js/project-pages/ims-software.js" defer></script>
+</head>
+<body>
+    <div class="scroll-progress"></div>
+
+    <!-- Single Navigation -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="../index.html#intro">Home</a></li>
+            <li><a href="../index.html#about">About Me</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="cv-actions">
+            <a href="../documentsandzip/Aleks_Aleksandrov_CV.pdf" 
+               class="cv-button view-cv"
+               target="_blank">
+                <i class="fas fa-eye"></i> View CV
+            </a>
+            <a href="../documentsandzip/Aleksreclet.pdf" 
+               class="cv-button view-recommendation"
+               target="_blank">
+                <i class="fas fa-certificate"></i> View Recommendation
+            </a>
+        </div>
+    </nav>
+
+    <!-- Single Unified Header/Hero Section -->
+    <header class="project-hero ims-hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <h1>International Market Selection Software</h1>
+            <p class="hero-subtitle">A data-driven software solution for Guldmann A/S to analyze and select optimal international markets</p>
+            <div class="project-meta">
+                <span><i class="fas fa-users"></i> Team Size: 4</span>
+                <span><i class="fas fa-calendar"></i> Duration: 6 Weeks</span>
+                <span><i class="fas fa-code-branch"></i> Role: Lead Analyst</span>
+            </div>
+            <div class="tech-stack">
+                <span>Market Analysis</span>
+                <span>Data Analytics</span>
+                <span>Java</span>
+                <span>Power BI</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <div class="project-container">
+        <!-- Overview Section -->
+        <section class="project-section overview-section" data-aos="fade-up">
+            <h2>Project Overview</h2>
+            <div class="overview-content">
+                <div class="project-description">
+                    <p>The International Market Selection Software is a comprehensive solution developed for Guldmann A/S to streamline their market expansion strategy. The software analyzes multiple market indicators and provides data-driven recommendations for market entry decisions.</p>
+                    <div class="key-features">
+                        <h3>Key Objectives</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Automated market analysis and scoring</li>
+                            <li><i class="fas fa-check-circle"></i> Risk assessment and mitigation strategies</li>
+                            <li><i class="fas fa-check-circle"></i> Data-driven decision support system</li>
+                            <li><i class="fas fa-check-circle"></i> Real-time market insights dashboard</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="analysis-metrics">
+                    <div class="metric-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Markets Analyzed</h3>
+                        <div id="markets-metric" class="metric-value">50+</div>
+                        <p>Global Markets</p>
+                    </div>
+                    <div class="metric-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Data Points</h3>
+                        <div id="datapoints-metric" class="metric-value">10,000+</div>
+                        <p>Market Indicators</p>
+                    </div>
+                    <div class="metric-card">
+                        <i class="fas fa-percentage"></i>
+                        <h3>Accuracy Rate</h3>
+                        <div id="accuracy-metric" class="metric-value">90%</div>
+                        <p>Prediction Accuracy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Analysis Framework -->
+        <section class="project-section framework-section" data-aos="fade-up">
+            <h2>Analysis Framework</h2>
+            <div class="framework-grid">
+                <div class="framework-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Market Research</h3>
+                    <p>Comprehensive data collection and analysis of market indicators</p>
+                </div>
+                <div class="framework-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Risk Assessment</h3>
+                    <p>Multi-factor risk evaluation and mitigation strategies</p>
+                </div>
+                <div class="framework-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Growth Potential</h3>
+                    <p>Market growth forecasting and opportunity analysis</p>
+                </div>
+                <div class="framework-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Entry Strategy</h3>
+                    <p>Customized market entry recommendations</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Visualization -->
+        <section class="project-section visualization-section" data-aos="fade-up">
+            <h2>Data Visualization</h2>
+            <div class="visualization-grid">
+                <div class="chart-container">
+                    <h3>Market Potential Analysis</h3>
+                    <canvas id="marketPotentialChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Risk Assessment Matrix</h3>
+                    <canvas id="riskAnalysisChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Growth Forecast</h3>
+                    <canvas id="growthForecastChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="project-section tech-section" data-aos="fade-up">
+            <h2>Technical Implementation</h2>
+            <div class="tech-stack-icons">
+                <div class="tech-icon">
+                    <i class="fab fa-java"></i>
+                    <span>Java</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-database"></i>
+                    <span>MySQL</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Power BI</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-brain"></i>
+                    <span>Machine Learning</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-cloud"></i>
+                    <span>Azure</span>
+                </div>
+            </div>
+
+            <div class="tech-stack-details">
+                <div class="tech-category">
+                    <h3><i class="fas fa-code"></i> Core Development</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Java Spring Boot backend</li>
+                        <li><i class="fas fa-check-circle"></i> RESTful API architecture</li>
+                        <li><i class="fas fa-check-circle"></i> MySQL database with JPA</li>
+                        <li><i class="fas fa-check-circle"></i> Microservices architecture</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3><i class="fas fa-brain"></i> Data Analysis</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Machine learning algorithms</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced statistical analysis</li>
+                        <li><i class="fas fa-check-circle"></i> Time series forecasting</li>
+                        <li><i class="fas fa-check-circle"></i> Market sentiment analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3><i class="fas fa-chart-line"></i> Data Visualization</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Power BI integration</li>
+                        <li><i class="fas fa-check-circle"></i> Interactive dashboards</li>
+                        <li><i class="fas fa-check-circle"></i> Real-time data updates</li>
+                        <li><i class="fas fa-check-circle"></i> Custom visualization components</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <h3><i class="fas fa-cloud"></i> Infrastructure</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Azure Cloud deployment</li>
+                        <li><i class="fas fa-check-circle"></i> Docker containerization</li>
+                        <li><i class="fas fa-check-circle"></i> CI/CD pipeline</li>
+                        <li><i class="fas fa-check-circle"></i> Automated scaling</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="project-section results-section" data-aos="fade-up">
+            <h2>Results & Impact</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">90%</div>
+                    <p>Decision Accuracy</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">50+</div>
+                    <p>Markets Analyzed</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">40%</div>
+                    <p>Time Saved</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Project Navigation -->
+    <nav class="project-nav">
+        <a href="../index.html#projects" class="nav-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        <a href="handmade.html" class="nav-link">Next Project <i class="fas fa-arrow-right"></i></a>
+    </nav>
+</body>
+</html> 

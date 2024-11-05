@@ -1,0 +1,241 @@
+/* IMS Software Project Specific Styles */
+:root {
+    --ims-primary: #3498db;
+    --ims-secondary: #2980b9;
+    --ims-accent: rgba(52, 152, 219, 0.1);
+}
+
+.ims-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../assets/images/international.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 6rem 2rem 3rem;
+    overflow: hidden;
+}
+
+.ims-hero .hero-content h1 {
+    background: linear-gradient(45deg, var(--ims-primary), var(--ims-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Analysis Metrics */
+.analysis-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(52, 152, 219, 0.1),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.metric-card:hover::before {
+    left: 100%;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    background: rgba(52, 152, 219, 0.05);
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.1);
+}
+
+.metric-card i {
+    font-size: 2.5rem;
+    color: var(--ims-primary);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.metric-card:hover i {
+    transform: scale(1.1);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--ims-primary);
+    margin: 1rem 0;
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Risk Assessment Matrix */
+.risk-matrix {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    margin: 2rem 0;
+}
+
+.risk-matrix h3 {
+    color: var(--ims-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.risk-factors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.risk-factor {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.risk-factor:hover {
+    transform: translateY(-5px);
+    background: rgba(52, 152, 219, 0.05);
+}
+
+/* Market Analysis Charts */
+.chart-container {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.chart-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.1);
+}
+
+.chart-container h3 {
+    color: var(--ims-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Technical Implementation */
+.tech-stack-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.tech-icon {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    min-width: 150px;
+}
+
+.tech-icon:hover {
+    transform: translateY(-5px);
+    background: rgba(52, 152, 219, 0.05);
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.1);
+}
+
+.tech-icon i {
+    font-size: 2.5rem;
+    color: var(--ims-primary);
+    margin-bottom: 1rem;
+}
+
+/* Results Section */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.result-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    background: rgba(52, 152, 219, 0.05);
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.1);
+}
+
+.result-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--ims-primary);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .metric-card,
+    .tech-icon,
+    .result-card {
+        padding: 1.5rem;
+    }
+
+    .chart-container {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tech-stack-icons {
+        gap: 1rem;
+    }
+
+    .tech-icon {
+        min-width: 120px;
+    }
+
+    .result-number {
+        font-size: 2.5rem;
+    }
+
+    .risk-factors {
+        grid-template-columns: 1fr;
+    }
+} 

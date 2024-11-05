@@ -1,0 +1,246 @@
+/* Solar Panel Project Specific Styles */
+:root {
+    --solar-primary: #FFB400;
+    --solar-secondary: #FF9100;
+    --solar-accent: rgba(255, 180, 0, 0.1);
+}
+
+.solar-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../assets/images/solar.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.solar-hero .hero-content h1 {
+    background: linear-gradient(45deg, var(--solar-primary), var(--solar-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Energy Metrics */
+.energy-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 180, 0, 0.2);
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 180, 0, 0.05);
+    box-shadow: 0 10px 20px rgba(255, 180, 0, 0.1);
+}
+
+.metric-card i {
+    font-size: 2.5rem;
+    color: var(--solar-primary);
+    margin-bottom: 1rem;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--solar-primary);
+    margin: 1rem 0;
+    text-shadow: 0 0 10px rgba(255, 180, 0, 0.3);
+}
+
+/* Monitoring Section */
+.monitoring-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.monitoring-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 180, 0, 0.2);
+}
+
+.monitoring-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 180, 0, 0.05);
+    box-shadow: 0 10px 20px rgba(255, 180, 0, 0.1);
+}
+
+.monitoring-card h3 {
+    color: var(--solar-primary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.real-time-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--solar-primary);
+    margin: 1rem 0;
+    text-shadow: 0 0 10px rgba(255, 180, 0, 0.3);
+}
+
+/* Performance Charts */
+.performance-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.chart-container {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 180, 0, 0.2);
+    height: 300px;
+    transition: all 0.3s ease;
+}
+
+.chart-container:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 180, 0, 0.05);
+    box-shadow: 0 10px 20px rgba(255, 180, 0, 0.1);
+}
+
+.chart-container h3 {
+    color: var(--solar-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* Tech Stack */
+.tech-icon {
+    border: 1px solid rgba(255, 180, 0, 0.2);
+}
+
+.tech-icon i {
+    color: var(--solar-primary);
+}
+
+.tech-category {
+    border: 1px solid rgba(255, 180, 0, 0.2);
+}
+
+.tech-category h3 {
+    color: var(--solar-primary);
+}
+
+.tech-category li i {
+    color: var(--solar-primary);
+}
+
+/* Results Section */
+.result-card {
+    border: 1px solid rgba(255, 180, 0, 0.2);
+}
+
+.result-number {
+    color: var(--solar-primary);
+}
+
+/* Animation Effects */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 180, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 180, 0, 0.2);
+    }
+}
+
+.metric-card:hover,
+.monitoring-card:hover,
+.tech-icon:hover,
+.chart-container:hover {
+    animation: glowPulse 2s infinite;
+}
+
+/* Real-time Value Animation */
+@keyframes valueUpdate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.real-time-value.updating {
+    animation: valueUpdate 0.5s ease;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .energy-metrics,
+    .monitoring-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .performance-charts {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .chart-container {
+        height: 250px;
+        padding: 1.5rem;
+    }
+
+    .chart-container h3 {
+        font-size: 1.1rem;
+    }
+
+    .metric-card,
+    .monitoring-card {
+        padding: 1.5rem;
+    }
+
+    .metric-value,
+    .real-time-value {
+        font-size: 2rem;
+    }
+}
+
+/* Loading States */
+.loading-chart {
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-chart::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 180, 0, 0.1);
+    border-top-color: var(--solar-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+} 

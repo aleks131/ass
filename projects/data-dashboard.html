@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Dashboard - Project Details</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-page.css">
+    <link rel="stylesheet" href="../css/data-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="../css/project-mobile.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="../js/components-loader.js"></script>
+    <script src="../js/project-pages/data-dashboard.js" defer></script>
+</head>
+<body>
+    <div class="scroll-progress"></div>
+
+    <!-- Single Navigation -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="../index.html#intro">Home</a></li>
+            <li><a href="../index.html#about">About Me</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="cv-actions">
+            <a href="../documentsandzip/Aleks_Aleksandrov_CV.pdf" 
+               class="cv-button view-cv"
+               target="_blank">
+                <i class="fas fa-eye"></i> View CV
+            </a>
+            <a href="../documentsandzip/Aleksreclet.pdf" 
+               class="cv-button view-recommendation"
+               target="_blank">
+                <i class="fas fa-certificate"></i> View Recommendation
+            </a>
+        </div>
+    </nav>
+
+    <!-- Single Unified Header/Hero Section -->
+    <header class="project-hero dashboard-hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <h1>Data Visualization Dashboard</h1>
+            <p class="hero-subtitle">A comprehensive business intelligence tool for real-time data analysis and visualization</p>
+            <div class="project-meta">
+                <span><i class="fas fa-users"></i> Team Size: 3</span>
+                <span><i class="fas fa-calendar"></i> Duration: 5 Weeks</span>
+                <span><i class="fas fa-code-branch"></i> Role: Lead Developer</span>
+            </div>
+            <div class="tech-stack">
+                <span>Power BI</span>
+                <span>SQL</span>
+                <span>Data Visualization</span>
+                <span>Analytics</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <div class="project-container">
+        <!-- Overview Section -->
+        <section class="project-section overview-section" data-aos="fade-up">
+            <h2>Project Overview</h2>
+            <div class="overview-content">
+                <p>The Data Analysis Dashboard is a powerful business intelligence tool that transforms raw data into actionable insights. It features real-time KPI tracking, interactive visualizations, and automated reporting capabilities.</p>
+                
+                <div class="dashboard-metrics">
+                    <div class="metric-card">
+                        <i class="fas fa-database"></i>
+                        <h3>Data Sources</h3>
+                        <div id="sources-metric" class="metric-value">0</div>
+                    </div>
+                    <div class="metric-card">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Visualizations</h3>
+                        <div id="visualizations-metric" class="metric-value">0</div>
+                    </div>
+                    <div class="metric-card">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>KPIs Tracked</h3>
+                        <div id="kpis-metric" class="metric-value">0</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="project-section features-section" data-aos="fade-up">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-sync"></i>
+                    <h3>Real-time Updates</h3>
+                    <p>Live data synchronization</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-filter"></i>
+                    <h3>Advanced Filtering</h3>
+                    <p>Dynamic data filtering capabilities</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-file-export"></i>
+                    <h3>Export Options</h3>
+                    <p>Multiple export formats</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-bell"></i>
+                    <h3>Alert System</h3>
+                    <p>Customizable notifications</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Visualization -->
+        <section class="project-section visualization-section" data-aos="fade-up">
+            <h2>Data Visualization</h2>
+            <div class="visualization-grid">
+                <div class="chart-container">
+                    <h3>Sales Performance</h3>
+                    <canvas id="salesChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Demographics Distribution</h3>
+                    <canvas id="demographicsChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Regional Distribution</h3>
+                    <canvas id="regionChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Growth Trend Analysis</h3>
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="project-section tech-section" data-aos="fade-up">
+            <h2>Technical Implementation</h2>
+            <div class="tech-stack-icons">
+                <div class="tech-icon">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Power BI</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-code"></i>
+                    <span>Python</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-server"></i>
+                    <span>Azure</span>
+                </div>
+            </div>
+
+            <div class="tech-stack-details">
+                <div class="tech-category">
+                    <h3>Data Processing</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> ETL pipelines</li>
+                        <li><i class="fas fa-check-circle"></i> Data cleaning</li>
+                        <li><i class="fas fa-check-circle"></i> Automated updates</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h3>Visualization</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Interactive charts</li>
+                        <li><i class="fas fa-check-circle"></i> Custom visuals</li>
+                        <li><i class="fas fa-check-circle"></i> Real-time updates</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h3>Infrastructure</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Cloud deployment</li>
+                        <li><i class="fas fa-check-circle"></i> Automated backups</li>
+                        <li><i class="fas fa-check-circle"></i> Security measures</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="project-section results-section" data-aos="fade-up">
+            <h2>Results & Impact</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">40%</div>
+                    <p>Faster Decision Making</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">25+</div>
+                    <p>Automated Reports</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">95%</div>
+                    <p>User Satisfaction</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Project Navigation -->
+    <nav class="project-nav">
+        <a href="../index.html#projects" class="nav-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        <a href="ims-software.html" class="nav-link">Next Project <i class="fas fa-arrow-right"></i></a>
+    </nav>
+</body>
+</html> 

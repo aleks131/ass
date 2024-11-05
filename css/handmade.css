@@ -1,0 +1,241 @@
+/* Handmade Project Specific Styles */
+:root {
+    --handmade-primary: #E91E63;
+    --handmade-secondary: #C2185B;
+    --handmade-accent: rgba(233, 30, 99, 0.1);
+}
+
+.handmade-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../assets/images/handmade.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.handmade-hero .hero-content h1 {
+    background: linear-gradient(45deg, var(--handmade-primary), var(--handmade-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Platform Metrics */
+.platform-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    background: rgba(233, 30, 99, 0.05);
+    box-shadow: 0 10px 20px rgba(233, 30, 99, 0.1);
+}
+
+.metric-card i {
+    font-size: 2.5rem;
+    color: var(--handmade-primary);
+    margin-bottom: 1rem;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--handmade-primary);
+    margin: 1rem 0;
+    text-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
+}
+
+/* Research Methods */
+.research-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.method-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+.method-card:hover {
+    transform: translateY(-5px);
+    background: rgba(233, 30, 99, 0.05);
+    box-shadow: 0 10px 20px rgba(233, 30, 99, 0.1);
+}
+
+.method-card i {
+    font-size: 2.5rem;
+    color: var(--handmade-primary);
+    margin-bottom: 1rem;
+}
+
+.method-card h3 {
+    color: var(--handmade-primary);
+    margin-bottom: 1rem;
+}
+
+/* Research Findings */
+.research-findings {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 3rem;
+    border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+.research-findings h3 {
+    color: var(--handmade-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.research-findings ul {
+    list-style: none;
+    padding: 0;
+}
+
+.research-findings li {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.research-findings li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--handmade-primary);
+}
+
+/* Design Process */
+.process-step {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    background: rgba(233, 30, 99, 0.05);
+    box-shadow: 0 10px 20px rgba(233, 30, 99, 0.1);
+}
+
+.step-number {
+    font-size: 2.5rem;
+    color: var(--handmade-primary);
+    margin-bottom: 1rem;
+}
+
+/* Features Grid */
+.feature-card {
+    border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+.feature-card i {
+    color: var(--handmade-primary);
+}
+
+.feature-card:hover {
+    background: rgba(233, 30, 99, 0.05);
+    box-shadow: 0 10px 20px rgba(233, 30, 99, 0.1);
+}
+
+/* Results Section */
+.result-card {
+    border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+.result-number {
+    color: var(--handmade-primary);
+}
+
+/* Animation Effects */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(233, 30, 99, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(233, 30, 99, 0.2);
+    }
+}
+
+.metric-card:hover,
+.method-card:hover,
+.process-step:hover,
+.feature-card:hover {
+    animation: glowPulse 2s infinite;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .platform-metrics,
+    .research-methods {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .method-card,
+    .process-step {
+        padding: 1.5rem;
+    }
+
+    .metric-card {
+        padding: 1.5rem;
+    }
+
+    .metric-value {
+        font-size: 2rem;
+    }
+
+    .research-findings {
+        padding: 1.5rem;
+    }
+
+    .step-number {
+        font-size: 2rem;
+    }
+}
+
+/* Loading States */
+.loading-element {
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-element::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(233, 30, 99, 0.1);
+    border-top-color: var(--handmade-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+} 

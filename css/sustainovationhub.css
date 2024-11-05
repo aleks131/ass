@@ -1,0 +1,143 @@
+/* SustainovationHub Project Specific Styles */
+:root {
+    --sustainovation-primary: #4CAF50;
+    --sustainovation-secondary: #388E3C;
+    --sustainovation-accent: rgba(76, 175, 80, 0.1);
+}
+
+.sustainovation-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../assets/images/sustain.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 6rem 2rem 3rem;
+    overflow: hidden;
+}
+
+.sustainovation-hero .hero-content h1 {
+    background: linear-gradient(45deg, var(--sustainovation-primary), var(--sustainovation-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Platform Metrics */
+.platform-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    background: rgba(76, 175, 80, 0.05);
+    box-shadow: 0 10px 20px rgba(76, 175, 80, 0.1);
+}
+
+.metric-card i {
+    font-size: 2.5rem;
+    color: var(--sustainovation-primary);
+    margin-bottom: 1rem;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--sustainovation-primary);
+    margin: 1rem 0;
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+/* Features Grid */
+.feature-card {
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.feature-card i {
+    color: var(--sustainovation-primary);
+}
+
+.feature-card:hover {
+    background: rgba(76, 175, 80, 0.05);
+    box-shadow: 0 10px 20px rgba(76, 175, 80, 0.1);
+}
+
+/* Tech Stack */
+.tech-icon {
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.tech-icon i {
+    color: var(--sustainovation-primary);
+}
+
+.tech-category {
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.tech-category h3 {
+    color: var(--sustainovation-primary);
+}
+
+.tech-category li i {
+    color: var(--sustainovation-primary);
+}
+
+/* Results Section */
+.result-card {
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.result-number {
+    color: var(--sustainovation-primary);
+}
+
+/* Animation Effects */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(76, 175, 80, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.2);
+    }
+}
+
+.metric-card:hover,
+.feature-card:hover,
+.tech-icon:hover {
+    animation: glowPulse 2s infinite;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .platform-metrics {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .metric-card {
+        padding: 1.5rem;
+    }
+
+    .metric-value {
+        font-size: 2rem;
+    }
+} 

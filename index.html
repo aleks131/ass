@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Aleks Aleksandrov - Business Engineer and Data Analyst Portfolio">
+    <meta name="keywords" content="business engineer, data analyst, portfolio, web development">
+    <title>Aleks Aleksandrov - Portfolio</title>
+    
+    <!-- Fonts and Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="js/scripts.js" defer></script>
+
+    <!-- Add preload for critical resources -->
+    <link rel="preload" href="fonts/your-main-font.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="css/styles.css" as="style">
+    
+    <!-- Defer non-critical scripts -->
+    <script src="js/aos.js" defer></script>
+    <script src="js/particles.js" defer></script>
+</head>
+<body>
+    <!-- Add this right after the opening body tag -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header Section -->
+    <header id="particles-js">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Aleks Aleksandrov</h1>
+                <div class="header-subtitle">
+                    <span class="divider">|</span>
+                    <span class="role">Business Engineer</span>
+                    <span class="divider">|</span>
+                    <span class="role">Data Analyst</span>
+                    <span class="divider">|</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="cv-actions">
+            <a href="documentsandzip/Aleks_Aleksandrov_CV.pdf" 
+               class="cv-button view-cv"
+               target="_blank">
+                <i class="fas fa-eye"></i> View CV
+            </a>
+            <a href="documentsandzip/Aleksreclet.pdf" 
+               class="cv-button view-recommendation"
+               target="_blank">
+                <i class="fas fa-certificate"></i> View Recommendation
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Intro Section -->
+        <section id="intro" class="intro glass-effect" data-aos="fade-up">
+            <img src="assets/images/aleks.jpg" alt="Aleks Aleksandrov">
+            <h2>Aleks Aleksandrov</h2>
+            <p>Hi, I'm Aleks Aleksandrov, a 23-year-old Global Business Engineering student. I'm responsible, ready to learn, and eager to work as a Data Analyst. I have specialization in project management and data analysis, and I thrive on bringing ideas to life and making technology accessible to everyone.</p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about glass-effect" data-aos="fade-up">
+            <div class="about-container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <img src="assets/images/Aleks.JPG" alt="Aleks Aleksandrov" class="about-image">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p class="intro-text">Hello! I'm Aleks Aleksandrov</p>
+                        <p class="description">
+                            I am a hardworking Global Business Engineering student and aspiring Data Analyst who uses strong software engineering, data analysis, and project management skills along with willingness to learn and improve. While my previous roles have involved laying down new processes and providing consistent ways of improving operating models and analytical understanding of business data, the merging of technical know-how with strategic thinking is my core competency. I am therefore able to practice what I learn and at the same time gain further experience in the use of data to work on projects, collaboration using agile, and working in teams. With the international outlook and willingness to learn new things I wish to use the knowledge I acquired and make meaningful changes that will benefit people using evidence-based approach.
+                        </p>
+                        <div class="key-points">    
+                            <div class="point">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Data Analysis & Visualization</span>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-cogs"></i>
+                                <span>Business Process Optimization</span>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-database"></i>
+                                <span>Database Management</span>
+                            </div>
+                        </div>
+                        <div class="about-buttons">
+                            <a href="#contact" class="button-glow">Contact Me</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills glass-effect" data-aos="fade-up">
+            <div class="skills-container">
+                <h2>My Skills</h2>
+                
+                <!-- Programming Languages -->
+                <div class="skills-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-donut">
+                                <svg class="skill-circle" viewbox="0 0 100 100">
+                                    <circle class="skill-ring" cx="50" cy="50" r="45"/>
+                                    <circle class="skill-progress java" cx="50" cy="50" r="45" data-percent="55"/>
+                                </svg>
+                                <div class="skill-percent">55%</div>
+                            </div>
+                            <h3>Java</h3>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-donut">
+                                <svg class="skill-circle" viewbox="0 0 100 100">
+                                    <circle class="skill-ring" cx="50" cy="50" r="45"/>
+                                    <circle class="skill-progress python" cx="50" cy="50" r="45" data-percent="65"/>
+                                </svg>
+                                <div class="skill-percent">65%</div>
+                            </div>
+                            <h3>Python</h3>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-donut">
+                                <svg class="skill-circle" viewbox="0 0 100 100">
+                                    <circle class="skill-ring" cx="50" cy="50" r="45"/>
+                                    <circle class="skill-progress csharp" cx="50" cy="50" r="45" data-percent="40"/>
+                                </svg>
+                                <div class="skill-percent">40%</div>
+                            </div>
+                            <h3>C#</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skills-category">
+                    <h3><i class="fas fa-laptop-code"></i> Web Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-donut">
+                                <svg class="skill-circle" viewbox="0 0 100 100">
+                                    <circle class="skill-ring" cx="50" cy="50" r="45"/>
+                                    <circle class="skill-progress javascript" cx="50" cy="50" r="45" data-percent="60"/>
+                                </svg>
+                                <div class="skill-percent">60%</div>
+                            </div>
+                            <h3>JavaScript</h3>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-donut">
+                                <svg class="skill-circle" viewbox="0 0 100 100">
+                                    <circle class="skill-ring" cx="50" cy="50" r="45"/>
+                                    <circle class="skill-progress html" cx="50" cy="50" r="45" data-percent="70"/>
+                                </svg>
+                                <div class="skill-percent">70%</div>
+                            </div>
+                            <h3>HTML/CSS</h3>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-donut">
+                                <svg class="skill-circle" viewbox="0 0 100 100">
+                                    <circle class="skill-ring" cx="50" cy="50" r="45"/>
+                                    <circle class="skill-progress react" cx="50" cy="50" r="45" data-percent="50"/>
+                                </svg>
+                                <div class="skill-percent">50%</div>
+                            </div>
+                            <h3>React</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data & Analytics -->
+                <div class="skills-category">
+                    <h3><i class="fas fa-database"></i> Data & Analytics</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-donut">
+                                <svg class="skill-circle" viewbox="0 0 100 100">
+                                    <circle class="skill-ring" cx="50" cy="50" r="45"/>
+                                    <circle class="skill-progress sql" cx="50" cy="50" r="45" data-percent="65"/>
+                                </svg>
+                                <div class="skill-percent">65%</div>
+                            </div>
+                            <h3>SQL</h3>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-donut">
+                                <svg class="skill-circle" viewbox="0 0 100 100">
+                                    <circle class="skill-ring" cx="50" cy="50" r="45"/>
+                                    <circle class="skill-progress data-gathering" cx="50" cy="50" r="45" data-percent="80"/>
+                                </svg>
+                                <div class="skill-percent">80%</div>
+                            </div>
+                            <h3>Data Gathering</h3>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-donut">
+                                <svg class="skill-circle" viewbox="0 0 100 100">
+                                    <circle class="skill-ring" cx="50" cy="50" r="45"/>
+                                    <circle class="skill-progress powerbi" cx="50" cy="50" r="45" data-percent="60"/>
+                                </svg>
+                                <div class="skill-percent">60%</div>
+                            </div>
+                            <h3>Power BI</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects glass-effect" data-aos="fade-up">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <!-- SustainovationHub Project -->
+                <div class="project-card glass-effect" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="assets/images/sustain.webp" alt="SustainovationHub">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>SustainovationHub</h3>
+                        <p>An e-commerce platform connecting eco-conscious consumers with sustainable products. Features include seller verification, impact tracking, and community engagement.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-users"></i> Team: 4</span>
+                            <span><i class="fas fa-calendar"></i> 10 Weeks</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/sustainovationhub.html" class="button-glow">View Details</a>
+                            <a href="documentsandzip/Sustain.zip" 
+                               class="button-glow download-btn" 
+                               onclick="trackProjectDownload(event, 'sustainovationhub')"
+                               download>
+                                <i class="fas fa-download"></i> Download Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solar Panel Project -->
+                <div class="project-card glass-effect" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="assets/images/solar.webp" alt="Solar Panel Monitoring">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>PostgreSQL</span>
+                                <span>Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Solar Panel Monitoring System</h3>
+                        <p>A comprehensive monitoring system for tracking solar panel performance and energy generation at Ejby Maskinfabrik.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-users"></i> Team: 5</span>
+                            <span><i class="fas fa-calendar"></i> 7 Weeks</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/solar-panel.html" class="button-glow">View Details</a>
+                            <a href="documentsandzip/CodeCraft_Software.zip" 
+                               class="button-glow download-btn" 
+                               onclick="trackProjectDownload(event, 'solar-panel')"
+                               download>
+                                <i class="fas fa-download"></i> Download Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WasteWise Project -->
+                <div class="project-card glass-effect" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="assets/images/waste.webp" alt="WasteWise">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>CAD</span>
+                                <span>Research</span>
+                                <span>Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>WasteWise – Smart Trash Can</h3>
+                        <p>A user-centered design project for an intelligent waste management system featuring smart sorting and compacting capabilities.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-users"></i> Team: 6</span>
+                            <span><i class="fas fa-calendar"></i> 8 Weeks</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/wastewise.html" class="button-glow">View Details</a>
+                            <a href="documentsandzip/Wise.zip" 
+                               class="button-glow download-btn" 
+                               onclick="trackProjectDownload(event, 'wastewise')"
+                               download>
+                                <i class="fas fa-download"></i> Download Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Handmade Project -->
+                <div class="project-card glass-effect" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="assets/images/handmade.webp" alt="Handmade Platform">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>UX/UI</span>
+                                <span>Strategy</span>
+                                <span>Research</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Handmade</h3>
+                        <p>An e-commerce platform designed for artisans to showcase and sell their handcrafted products with customizable storefronts.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-users"></i> Team: 3</span>
+                            <span><i class="fas fa-calendar"></i> 9 Weeks</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/handmade.html" class="button-glow">View Details</a>
+                            <a href="documentsandzip/Handmade.zip" 
+                               class="button-glow download-btn" 
+                               onclick="trackProjectDownload(event, 'handmade')"
+                               download>
+                                <i class="fas fa-download"></i> Download Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IMS Software Project -->
+                <div class="project-card glass-effect" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="assets/images/international.webp" alt="International Market Selection Software">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Market Analysis</span>
+                                <span>Data Analytics</span>
+                                <span>Java</span>
+                                <span>Power BI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>International Market Selection Software</h3>
+                        <p>A data-driven software solution for Guldmann A/S to analyze and select optimal international markets for expansion.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-users"></i> Team: 4</span>
+                            <span><i class="fas fa-calendar"></i> 6 Weeks</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/ims-software.html" class="button-glow">View Details</a>
+                            <a href="documentsandzip/IMS.zip" 
+                               class="button-glow download-btn" 
+                               onclick="trackProjectDownload(event, 'ims-software')"
+                               download>
+                                <i class="fas fa-download"></i> Download Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Analysis Dashboard Project -->
+                <div class="project-card glass-effect" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="assets/images/data.webp" alt="Data Analysis Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Power BI</span>
+                                <span>SQL</span>
+                                <span>Data Visualization</span>
+                                <span>Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Analysis Dashboard</h3>
+                        <p>A comprehensive business intelligence dashboard providing real-time insights into key performance indicators.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-users"></i> Team: 3</span>
+                            <span><i class="fas fa-calendar"></i> 5 Weeks</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/data-dashboard.html" class="button-glow">View Details</a>
+                            <a href="documentsandzip/Dashboard.zip" 
+                               class="button-glow download-btn" 
+                               onclick="trackProjectDownload(event, 'data-dashboard')"
+                               download>
+                                <i class="fas fa-download"></i> Download Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact glass-effect" data-aos="fade-up">
+            <h2>Contact Me</h2>
+            <p>If you have any questions, suggestions, or just want to connect, feel free to reach out!</p>
+            <div class="contact-buttons">
+                <a href="mailto:aleksaleksandrov670@gmail.com" class="button-glow">Send me an email</a>
+                <a href="https://www.linkedin.com/in/aleks-aleksandrov-42a472238/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BBOcpe2aeSWyRNluqSsemsQ%3D%3D" target="_blank" class="button-glow">Connect on LinkedIn</a>
+                <a href="https://github.com/aleks131" target="_blank" class="button-glow">View my GitHub</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer glass-effect">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Aleks Aleksandrov</h3>
+                <p>Business Engineer & Data Analyst</p>
+                <div class="footer-social">
+                    <a href="https://github.com/AleksAleksandrov" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/aleksandrov-aleks" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:aleksaleksandrov670@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> aleksaleksandrov670@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +45 52 71 37 04 </p>
+                <p><i class="fas fa-map-marker-alt"></i> Aarhus, Denmark</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Aleks Aleksandrov. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add this right after <body> tag -->
+    <svg width="0" height="0">
+        <defs>
+            <!-- Java Gradient -->
+            <linearGradient id="java-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#f89820"/>
+                <stop offset="100%" style="stop-color:#ff5722"/>
+            </linearGradient>
+            
+            <!-- Python Gradient -->
+            <linearGradient id="python-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#4B8BBE"/>
+                <stop offset="100%" style="stop-color:#306998"/>
+            </linearGradient>
+            
+            <!-- JavaScript Gradient -->
+            <linearGradient id="js-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#F0DB4F"/>
+                <stop offset="100%" style="stop-color:#FFB800"/>
+            </linearGradient>
+            
+            <!-- SQL Gradient -->
+            <linearGradient id="sql-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00758F"/>
+                <stop offset="100%" style="stop-color:#004a5c"/>
+            </linearGradient>
+            
+            <!-- HTML Gradient -->
+            <linearGradient id="html-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FF5722"/>
+                <stop offset="100%" style="stop-color:#FF3D00"/>
+            </linearGradient>
+            
+            <!-- React Gradient -->
+            <linearGradient id="react-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#61DAFB"/>
+                <stop offset="100%" style="stop-color:#00b4d8"/>
+            </linearGradient>
+            
+            <!-- Data Gathering Gradient -->
+            <linearGradient id="data-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#9C27B0"/>
+                <stop offset="100%" style="stop-color:#673AB7"/>
+            </linearGradient>
+            
+            <!-- Power BI Gradient -->
+            <linearGradient id="powerbi-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#F2C811"/>
+                <stop offset="100%" style="stop-color:#E6B000"/>
+            </linearGradient>
+        </defs>
+    </svg>
+</body>
+</html> 

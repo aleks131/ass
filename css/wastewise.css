@@ -1,0 +1,193 @@
+/* WasteWise Project Specific Styles */
+:root {
+    --wastewise-primary: #2ecc71;
+    --wastewise-secondary: #27ae60;
+    --wastewise-accent: rgba(46, 204, 113, 0.1);
+}
+
+.wastewise-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../assets/images/waste.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.wastewise-hero .hero-content h1 {
+    background: linear-gradient(45deg, var(--wastewise-primary), var(--wastewise-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Metrics Cards */
+.waste-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    background: rgba(46, 204, 113, 0.05);
+    box-shadow: 0 10px 20px rgba(46, 204, 113, 0.1);
+}
+
+.metric-card i {
+    font-size: 2.5rem;
+    color: var(--wastewise-primary);
+    margin-bottom: 1rem;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--wastewise-primary);
+    margin: 1rem 0;
+    text-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+}
+
+/* Timeline Section */
+.design-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 2rem 0;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--wastewise-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--wastewise-primary);
+    border: 2px solid var(--wastewise-primary);
+}
+
+.timeline-content {
+    flex-grow: 1;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.timeline-content h3 {
+    color: var(--wastewise-primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Features Grid */
+.feature-card {
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.feature-card i {
+    color: var(--wastewise-primary);
+}
+
+.feature-card:hover {
+    background: rgba(46, 204, 113, 0.05);
+    box-shadow: 0 10px 20px rgba(46, 204, 113, 0.1);
+}
+
+/* Tech Stack */
+.tech-icon {
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.tech-icon i {
+    color: var(--wastewise-primary);
+}
+
+.tech-category {
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.tech-category h3 {
+    color: var(--wastewise-primary);
+}
+
+.tech-category li i {
+    color: var(--wastewise-primary);
+}
+
+/* Results Section */
+.result-card {
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.result-number {
+    color: var(--wastewise-primary);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .waste-metrics {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .timeline-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .timeline-content {
+        width: 100%;
+        padding: 1.2rem;
+    }
+
+    .metric-card {
+        padding: 1.5rem;
+    }
+
+    .metric-value {
+        font-size: 2rem;
+    }
+}
+
+/* Animation Effects */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(46, 204, 113, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(46, 204, 113, 0.2);
+    }
+}
+
+.metric-card:hover,
+.feature-card:hover,
+.tech-icon:hover {
+    animation: glowPulse 2s infinite;
+} 
