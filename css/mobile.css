@@ -20,10 +20,11 @@
         overflow: hidden;
     }
 
-    /* Enhanced Header */
+    /* Centered Header */
     .header-text {
         width: 90%;
         padding: 1.5rem;
+        text-align: center;
     }
 
     .header-text h1 {
@@ -31,13 +32,6 @@
         line-height: 1.2;
         margin-bottom: 1rem;
         word-wrap: break-word;
-    }
-
-    .header-subtitle {
-        font-size: 1rem;
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
     }
 
     /* Improved Navigation */
@@ -93,6 +87,7 @@
         font-size: 1.1rem;
         min-height: 44px;
         padding: 12px;
+        text-align: center;
     }
 
     /* Enhanced Mobile Menu Button */
@@ -124,12 +119,14 @@
         padding: 0.5rem;
         display: flex;
         flex-direction: column;
-        gap: 0.8rem;
+        align-items: center;
+        gap: 1rem;
         margin-top: 1rem;
     }
 
     .cv-button {
         width: 100%;
+        max-width: 300px;
         padding: 1rem;
         font-size: 1rem;
         display: flex;
@@ -138,6 +135,8 @@
         gap: 0.5rem;
         border-radius: 8px;
         transition: all 0.3s ease;
+        background-color: #f05454;
+        color: #fff;
     }
 
     /* Enhanced Skills Section */
@@ -170,6 +169,8 @@
         border-radius: 12px;
         background: #1a1a1a;
         border: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .project-image {
@@ -183,18 +184,24 @@
 
     .project-links {
         flex-direction: column;
+        align-items: center;
         gap: 0.8rem;
         padding: 0.5rem;
     }
 
     .project-links a {
         width: 100%;
+        max-width: 300px;
         padding: 0.8rem;
         font-size: 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
+        background-color: #f05454;
+        color: #fff;
+        border-radius: 8px;
+        transition: all 0.3s ease;
     }
 
     /* Enhanced About Section */
@@ -218,19 +225,26 @@
     }
 
     .contact-buttons {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
         width: 100%;
     }
 
     .contact-buttons a {
         width: 100%;
+        max-width: 300px;
         padding: 1rem;
         font-size: 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        background-color: #f05454;
+        color: #fff;
     }
 
     /* Enhanced Footer */
@@ -238,6 +252,7 @@
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 2rem 1rem 1rem;
+        text-align: center;
     }
 
     .footer-section {
