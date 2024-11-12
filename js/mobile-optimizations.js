@@ -1,4 +1,3 @@
-// Mobile Performance Optimizations
 document.addEventListener('DOMContentLoaded', function() {
     // Lazy load images
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
@@ -13,71 +12,63 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(lazyLoadScript);
     }
 
-    // Intersection Observer for smooth section animations
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         });
-    }, {
-        threshold: 0.1
     });
 
-    document.querySelectorAll('.project-section').forEach(section => {
-        observer.observe(section);
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('.nav-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('active');
     });
 
-    // Touch event optimizations
-    let touchStartY = 0;
+    // Close mobile menu on link click
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+        });
+    });
+
+    // Enhance touch responsiveness
+    let touchStartX = 0;
+    let touchEndX = 0;
+
     document.addEventListener('touchstart', e => {
-        touchStartY = e.touches[0].clientY;
-    }, { passive: true });
+        touchStartX = e.changedTouches[0].screenX;
+    });
 
-    // Optimize scroll performance
-    let ticking = false;
-    document.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                // Update scroll-based animations
-                updateScrollProgress();
-                ticking = false;
-            });
-            ticking = true;
-        }
-    }, { passive: true });
+    document.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
 
-    // Memory management for charts
-    function optimizeCharts() {
-        const charts = document.querySelectorAll('.chart-container');
-        charts.forEach(chart => {
-            const canvas = chart.querySelector('canvas');
-            if (canvas && !isElementInViewport(canvas)) {
-                canvas.style.display = 'none';
-            } else if (canvas) {
-                canvas.style.display = 'block';
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchEndX - touchStartX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0 && navMenu.classList.contains('active')) {
+                // Swipe right, close menu
+                mobileMenuBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+            } else if (diff < 0 && !navMenu.classList.contains('active')) {
+                // Swipe left, open menu
+                mobileMenuBtn.classList.add('active');
+                navMenu.classList.add('active');
             }
-        });
-    }
-
-    // Throttle chart optimization
-    let throttleTimer;
-    window.addEventListener('scroll', () => {
-        if (throttleTimer) return;
-        throttleTimer = setTimeout(() => {
-            optimizeCharts();
-            throttleTimer = null;
-        }, 100);
-    }, { passive: true });
-
-    // Helper function to check if element is in viewport
-    function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= window.innerHeight &&
-            rect.right <= window.innerWidth
-        );
+        }
     }
 }); 
